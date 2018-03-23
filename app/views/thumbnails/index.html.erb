@@ -12,7 +12,8 @@
 
     
     <% @thumbnails.each do |thumbnail| %>
-    <div>  
+    <div>
+        <%= link_to  thumbnail.title,thumbnail_path(thumbnail.id)%>  
         <em><%= thumbnail.title %></em>
         <em><%= thumbnail.body %></em>
         <em><%= thumbnail.main_image %></em>
