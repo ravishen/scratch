@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'New Thumbnail', new_thumbnail_path %>
+<h1>Thumbnails</h1>
+
+    <div>
+      <em>Title</em>
+      <em>Body</em>
+      <em>Main image</em>
+      <em>Thumb image</em>
+    </div>
+
+    
+    <% @thumbnails.each do |thumbnail| %>
+    <div>  
+        <em><%= thumbnail.title %></em>
+        <em><%= thumbnail.body %></em>
+        <em><%= thumbnail.main_image %></em>
+        <em><%=image_tag thumbnail.thumb_image %></em>
+        <em><%= link_to 'Show', thumbnail %></em>
+        <em><%= link_to 'Edit', edit_thumbnail_path(thumbnail) %></em>
+        <em><%= link_to 'Destroy', thumbnail, method: :delete, data: { confirm: 'Are you sure?' } %></em>
+    </div>
+    <% end %>
+    
+
+<br>
+

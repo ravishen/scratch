@@ -1,0 +1,10 @@
+<h1>portfolio#index</h1>
+<%@portfolio_item.each do |portfolio_items|%>
+    <%r=portfolio_items.title%>
+    <%=portfolio_items.thumb_image%>
+    <%=portfolio_items.main_image%>
+    <%=portfolio_items.body%>
+
+    <hr>
+<% end %>
+  
